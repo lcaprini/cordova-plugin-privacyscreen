@@ -14,11 +14,12 @@ UIImageView *imageView;
 {
 
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onAppDidBecomeActive:)
-                                               name:UIApplicationWillEnterForegroundNotification object:nil];
+                                               name:UIApplicationDidBecomeActiveNotification object:nil];
     
     
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onAppWillResignActive:)
-                                               name:UIApplicationDidEnterBackgroundNotification object:nil];                                            
+                                               name:UIApplicationWillResignActiveNotification object:nil]; 
+  
 }
 
 - (void)onAppDidBecomeActive:(UIApplication *)application
